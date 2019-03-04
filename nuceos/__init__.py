@@ -5,8 +5,9 @@
     modules.
 """
 
-__all__ = ["eos_base", "polytropic", "units"]
+__all__ = ["eos_base", "nuc_eos", "polytropic", "units"]
 
 from .eos_base import *
+from .nuc_eos import *
 from .polytropic import *
 from .units import *

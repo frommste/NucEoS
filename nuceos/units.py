@@ -36,12 +36,14 @@ class SystemOfUnits:
         # For more verbose reference
         self.mass = M
 
-        self.length = M*G / c**2
+        self.length = M*G / (c**2)
         self.time = self.length / c
-        self.density = M / self.length**3
-        self.force = M * self.length / self.time**2
-        self.pressure = self.force / self.length**2
-        self.energy_density = self.pressure
+        self.density = M / (self.length**3)
+        self.force = M * self.length / (self.time**2)
+        self.pressure = self.force / (self.length**2)
+        self.energy = self.force * self.length
+        self.energy_density = self.energy / (self.length**3)
+        self.specific_energy = self.energy / (self.mass)
 
 
 ### Some commonly used systems ###
