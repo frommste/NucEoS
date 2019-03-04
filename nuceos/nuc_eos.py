@@ -110,10 +110,6 @@ class BetaEquilibriumEOS(EOSBase):
         tuple of floats (or tuple of array of floats)
             The pressure and specific energy.
         """
-        assert self.rho_min <= rho <= self.rho_max, \
-            "Rho = {:.3e} outside of range ({:.3e}, {:.3e})".format(
-                rho, self.rho_min, self.rho_max)
-
         lrho = _np.log(rho)
         lP = self.__P_from_rho_func(lrho)
         leps = self.__eps_from_rho_func(lrho)
@@ -136,10 +132,6 @@ class BetaEquilibriumEOS(EOSBase):
         tuple of floats (or tuple of array of floats)
             The density and specific energy.
         """
-        assert self.press_min <= P <= self.press_max, \
-            "P = {:.3e} outside of range ({:.3e}, {:.3e})".format(
-                P, self.press_min, self.press_max)
-
         lP = _np.log(P)
         lrho = self.__rho_from_P_func(lP)
         leps = self.__eps_from_P_func(lP)
