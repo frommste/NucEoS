@@ -10,6 +10,8 @@
         Relativistic    |  REL  | G = c = M = 1
         Gaussian        |  CGS  |
         SI (MKS)        |  MKS  |
+
+    All values for units listed below are from http://pdg.lbl.gov.
 """
 
 
@@ -54,13 +56,13 @@ REL = SystemOfUnits(G=1.0,  # Gravitational constant
                     c=1.0)  # Speed of light
 
 # Gaussian units
-CGS = SystemOfUnits(G=6.673e-8,      # Gravitational constant [cm^3 g^-1 s^-2]
-                    M=1.98892e33,    # Solar mass [g]
+CGS = SystemOfUnits(G=6.67408e-8,     # Gravitational constant [cm^3 g^-1 s^-2]
+                    M=1.98848e33,     # Solar mass [g]
                     c=29979245800.0)  # Speed of light [cm s^-1]
 
 # SI units
-MKS = SystemOfUnits(G=6.673e-11,    # Gravitational constant [m^3 kg^-1 s-2]
-                    M=1.98892e30,   # Solar mass [kg]
+MKS = SystemOfUnits(G=6.67408e-11,  # Gravitational constant [m^3 kg^-1 s-2]
+                    M=1.98848e30,   # Solar mass [kg]
                     c=299792458.0)  # Speed of light [m s^-1]
 
 
