@@ -1,5 +1,5 @@
 # NucEoS
-Python interface for tabulated nuclear equations of state found on [stellarcollapse.org](https://stellarcollapse.org/equationofstate).
+Python interface for tabulated nuclear equations of state found on [stellarcollapse.org](https://stellarcollapse.org/).
 
 ## Installation
 1. Install NucEoS dependencies:
@@ -61,6 +61,6 @@ P, eps = eos.from_density(rho)
 ```
 
 ## Notes
-* Currently only a simple polytropic EOS and a beta equilibrium EOS from [stellarcollapse.org](https://stellarcollapse.org/equationofstate) are implemented.  These two are useful for applications such as TOV solvers.
+* Currently only a simple polytropic EOS and a beta equilibrium EOS from [stellarcollapse.org](https://stellarcollapse.org/) are implemented.  These two are useful for applications such as TOV solvers.
 * Some of the tables (e.g. the LS220 tables), do not always have beta equilibrium values for every density and temperature.
 * A full driver for reading the EOS tables will be added at a later date
