@@ -52,9 +52,11 @@ class BetaEquilibriumEOS(EOSBase):
         # Calculate beta equilibrium for every density (at specified T)
         for irho in range(self.logrho.size):
             munu = mue[:, iT0, irho] - mun[:, iT0, irho] + mup[:, iT0, irho]
-            press_func = interp1d(munu, logpress[:, iT0, irho])
-            energy_func = interp1d(munu, logenergy[:, iT0, irho])
-            ye_func = interp1d(munu, ye[:])
+            press_func = interp1d(
+                munu, logpress[:, iT0, irho], fill_value="extrapolate")
+            energy_func = interp1d(
+                munu, logenergy[:, iT0, irho], fill_value="extrapolate")
+            ye_func = interp1d(munu, ye[:], fill_value="extrapolate")
 
             self.logpress[irho] = press_func(0.0)
             self.logenergy[irho] = energy_func(0.0)
