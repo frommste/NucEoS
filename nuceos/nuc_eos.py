@@ -87,8 +87,6 @@ class BetaEquilibriumEOS(EOSBase):
         self.press_min = _np.exp(self.logpress_min)
         self.press_max = _np.exp(self.logpress_max)
 
-        print(self.press_min, self.press_max)
-
         self.ye_min = self.ye.min()
         self.ye_max = self.ye.max()
 
